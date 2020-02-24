@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+<body>
+
+    <h2>My First JavaScript</h2>
+
+    <p id="demo"></p>
+
+    <script>
+
+// create object
+var person = {
+    firstName: "Freddy",
+    lastName: "Castro",
+	money: 89,
+	id: 920071195,
+	edad: 20,
+	fullName: function() {return this.firstName + " " + this.lastName;},
+	canBuy: function(n) {return this.money >= n;}
+};
+
+var carro = {
+    marca: "Delorian",
+	costo: 500000,
+	placas: "P23-625T-4M",
+	color: "Gris",
+	puertas inclinadas: true,
+	nuevasPlacas: function(str) { this.placas = str; },
+	alternarFocos: function() { this.puertasInclinadas = !this.puertasInclinadas; }
+};
+
+var Invocador = {
+	nick: "MrMattews",
+	ip: "85.12.34.223",
+	money: 345,
+	homeID: 765,
+	ticks: 14,
+	newNick: function(s) { this.nick = s; },
+	disconnectPlayer: function() { this.ip = ""; }
+};
+
+var Minecraft= {
+    players: 0,
+	maxPlayers: 5,
+	mapID: 257,
+	serverName: "Utopia",
+	hash: 154,
+	addPlayer: function() { players++; },
+	overpopulated: function() { return players > maxPlayers; }
+};
+
+var  Celular = {
+    Modelo: 2934875293,
+	red: "Rojo",
+	blue: "Azul",
+	green: "Verde",
+	yellow: "Amarillo",
+	getmodelo: function() { return modelo; },
+	nameOf: function() { return this[1 + n]; }
+}
+
+
+// string that acumulates stuff
+var str = "";
+function log(txt) {
+    str += txt + "<br>";
+    document.getElementById('demo').innerHTML = str;
+}
+
+// next id printer
+function nextID() {
+    log("id: " + (person.id + 1));
+}
